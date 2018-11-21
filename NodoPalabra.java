@@ -45,8 +45,9 @@ public class NodoPalabra {
             }
         }else if(assciiValuewordToInsert==assciiValueactualWord){
             for(int index=1;index<actualWord.length;index++){
-                assciiValuewordToInsert= (int) wordToInsert[charPositionToEvaluate++];
-                assciiValueactualWord= (int) actualWord[charPositionToEvaluate++];
+                charPositionToEvaluate++;
+                assciiValuewordToInsert= (int) wordToInsert[charPositionToEvaluate];
+                assciiValueactualWord= (int) actualWord[charPositionToEvaluate];
                 if ( assciiValuewordToInsert < assciiValueactualWord ){
                     if ( nodoIzq == null ){
                         nodoIzq = new NodoPalabra( valorInsertar );
